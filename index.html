@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>cat eyes</title>
+        <style>
+            body{
+                margin:0px;
+                padding:0px;
+                background-color: black;
+                color:white;
+            }
+            .face{
+                position:absolute;
+                width:50%;
+                height: 500px;
+                margin:0px 25%;
+            }
+            .left-eye, .right-eye{
+                position:absolute;
+                top:0px;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-color: cornflowerblue;
+                box-shadow: 0px 0px 25px 5px cornflowerblue;
+
+                transition-timing-function:ease-in;
+                animation:5s breath-eyes infinite;
+            }
+            .left-eye{
+                left:0px;
+            }
+            .right-eye{
+                right:0px;
+            }
+            .mouth{
+                position:absolute;
+                bottom:0px;
+                left:49%;
+                width: 60px;
+                height: 20px;
+                border-radius: 100%;
+                background-color: cornflowerblue;
+                box-shadow: 0px 0px 25px 5px cornflowerblue;
+
+                transition-timing-function:ease-in;
+                animation:5s breath-mouth infinite;
+            }
+            @keyframes breath-eyes{
+                0%{
+                    transform: translateY(20px);
+                }
+                50%{
+                    transform: translateY(0px);
+                }
+                100%{
+                    transform: translateY(20px);
+                }
+            }
+            @keyframes breath-mouth{
+                0%{
+                    transform: translateY(0px);
+                    transform: translateX(-10px);
+                    width: 60px;
+                    height: 20px;
+                }
+                50%{
+                    transform: translateY(20px);
+                    transform: translateX(10px);
+                    width: 20px;
+                    height: 60px;
+                }
+                100%{
+                    transform: translateY(0px);
+                    transform: translateX(-10px);
+                    width: 60px;
+                    height: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <center>
+                <h2>cat eyes</h2>
+            </center>
+        </div>
+        <div class="face">
+            <div class="left-eye">
+            </div>
+            <div class="right-eye">
+            </div>
+            <div class="mouth">
+            </div>
+        </div>
+    </body>
+</html>
